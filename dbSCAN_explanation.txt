@@ -1,0 +1,16 @@
+Implement DBSCAN clustering to partion a set of 'points' into distinct clusters.
+
+```
+DBSCAN(points, epsilon, MinPts):
+    Select a point
+    If there are at least MinPts within epsilon of point, mark as core point and include core point and neighbors as cluster
+    Repeat the previous step for each neighbor until no new points are added
+    Select an unvisited point and repeat
+```
+
+<center><img src="figures/dbscan.gif"></center>
+
+The dataclass Point that contains the information for each point in the 2D space where we will be clustering. This class is defined below and includes a description of how to use the class. A demo of the clustering is shown above where we have plotted the steps of DBSCAN for the demo data provided.
+
+We impliment all of DBSCAN in the `DBSCAN` function. This function includes sub functions that you will also implement for `find_neighbors` and `euclidean_distance` that are all also defined below. These sub-functions should help break apart the parts of the algorithm described above.
+
